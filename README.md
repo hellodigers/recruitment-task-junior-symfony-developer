@@ -6,7 +6,7 @@
 
 ### Requirements/perequisites:
 * Don't spend time on making nice/styled frontend
-* Symfony 4.x, Doctrine
+* Symfony 4.x, Doctrine, MariaDB/MySQL
 
 
 
@@ -20,25 +20,23 @@ to use the *MARS PHOTOS API* - https://api.nasa.gov/api.html#MarsPhotos for this
 
 
 ### Task description
-Create a Symfony app with a REST API returning JSON contanining photo information (image-related data, image url) taken on a given date or date range
+Create a Symfony app with a REST API returning JSON contanining holiday info + photo information (image-related data, image url) taken on a given date or date range
 
 
-**Upon launch, the app should**
 
-1. Display a button [Get Holiday Data]
-2. On click, collect Polish national holiday dates *(for 2018 only!)* from external source and save this info to database
-3. Display [Holiday Data Retreival Complete] message
+1. Get/calculate a list of polish holidays in 2018 only and save them to the database 
 
-4. Prepare anonymous API with enpoint that allows to return a JSON containing:
+2. Prepare anonymous API with endpoint that allows to return a JSON containing:
 
-* a list of holidays occuring on defined date/date range 
-* list of images & image data taken on each holiday date
+* a list of holidays occuring on defined date/date range (all holidays in 2018 if no date parameters are sent within the api call)
+* list of images & image data (mission, camera type) taken on each holiday date
 
 Within the api call, allow to define the following image-related parameters:
 * rover (Curiosity, Opportunity, Spirit), 
 * Camera (FHAZ, RHAZ)
 
 If no image-related parameters are set in the API call, return images from all cameras from all 3 missions.
+
 
 
 
