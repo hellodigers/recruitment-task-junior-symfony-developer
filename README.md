@@ -28,7 +28,9 @@ Create a Symfony app with a REST API returning JSON contanining holiday info + p
 
 2. Get a list of all images & image data for 2019 holidays dates from NASA API and save them to the database (prepare console comand to refresh data)
 
-3. Prepare *anonymous API with two endpoints* - one endpoint that allows to return a JSON containing:
+3. Prepare *anonymous API with two endpoints*:
+
+a) one endpoint that allows to return a JSON containing:
 
 * a list of photos (image id, earth date, rover, camera) taken during holidays occuring on defined date/date range (all holidays in 2019 if no date parameters are sent within the api call)
 
@@ -36,7 +38,7 @@ Within the api call, allow to define the following image-related parameters:
 * rover (Curiosity, Opportunity, Spirit), 
 * Camera (FHAZ, RHAZ)
 
-4. Second endpoint - allowing to get detailed data for a single photo:
+b)  Second endpoint - allowing to get detailed data for a single photo:
 * image url
 * image earth date
 * rover
